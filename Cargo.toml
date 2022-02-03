@@ -1,0 +1,26 @@
+[package]
+name = "locus-visualization-2"
+version = "0.0.1"
+authors = ["Rüdiger Klaehn <rklaehn@protonmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+wasm-bindgen = "0.2.30"
+console_error_panic_hook = { version = "0.1.6", optional = true }
+piet = { version = "0.5.0", features = ["samples"] }
+piet-web = "0.5.0"
+sgp4 = "0.5.0"
+anyhow = "1.0.53"
+js-sys = "0.3.56"
+chrono = "0.4.19"
+parking_lot = "0.12.0"
+
+[dependencies.web-sys]
+version = "0.3.10"
+features = ["console", "CanvasRenderingContext2d", "Window", "Document", "Element", "HtmlElement", "HtmlCanvasElement", "MouseEvent", "WheelEvent"]
